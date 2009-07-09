@@ -1,0 +1,11 @@
+Now that we are able to launch Felix as a Java Application, 
+we can use the debugging and profiling features of Eclipse. 
+To debug bundles, create a new project for your bundle. Then 
+develop your bundle normally. Afterward, compile / package 
+your bundle to obtain the bundle Jar file. You can use Eclipse 
+PDE, Maven, BND, iPOJO, etc... to package your bundle.
+
+To debug, your code, first place a breakpoint inside your code. 
+Launch Felix in debug mode. Then deploy your bundle Jar file. 
+When the execution reaches the breakpoint, Eclipse opens the 
+debug perspective. You can use all debugging features normally.
