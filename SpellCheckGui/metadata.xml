@@ -1,0 +1,13 @@
+<ipojo>
+<!-- declare your component types and instances here -->
+
+<component classname="de.mn.felixembedand.gui.SpellCheckGui">
+	<provides/>
+	<requires optional="true">
+		<callback type="bind" method="bindSpellChecker"/>
+	    <callback type="unbind" method="unbindSpellChecker"/>
+    </requires>
+</component>
+<instance component="de.mn.felixembedand.gui.SpellCheckGui"/>
+
+</ipojo>
