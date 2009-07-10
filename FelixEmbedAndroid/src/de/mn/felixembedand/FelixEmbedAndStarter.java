@@ -248,7 +248,7 @@ public class FelixEmbedAndStarter extends Activity {
 			}
 			if (stateStr.length() == 0) stateStr = "SHIT";
 			
-			teststr = teststr+" "+b.getSymbolicName()+" STATE: "+stateStr+" ";
+			teststr = teststr+"\n "+b.getSymbolicName()+"\nSTATE: "+stateStr+" ";
 			System.out.println("TESTBUNDLE: "+b.getSymbolicName());
 		}
 
@@ -265,14 +265,14 @@ public class FelixEmbedAndStarter extends Activity {
      * @param target
      */
     private void delete(File target) {
-    	/*
+    	
     	if (target.isDirectory()) {
     		for (File file : target.listFiles()) {
     			delete(file);
     		}
     	}
     	target.delete();
-    */
+    
     }
     
     

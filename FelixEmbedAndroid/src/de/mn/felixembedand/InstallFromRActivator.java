@@ -25,6 +25,10 @@ public class InstallFromRActivator implements BundleActivator{
 		InputStream is = res.openRawResource(R.raw.bundlerepository);
         Bundle bundlebundlerepository = arg0.installBundle(fileRootPath+"/felix/bundle/bundlerepository.jar", is);
         
+        is = res.openRawResource(R.raw.shell);
+        Bundle bundleshell = arg0.installBundle(fileRootPath+"/felix/bundle/shell.jar", is);
+        
+        
         is = res.openRawResource(R.raw.ipojo);
         Bundle bundleipojo = arg0.installBundle(fileRootPath+"/felix/bundle/ipojo.jar", is);
         
@@ -38,11 +42,13 @@ public class InstallFromRActivator implements BundleActivator{
         Bundle bundlefileinstall130 = arg0.installBundle(fileRootPath+"/felix/bundle/fileinstall130.jar", is);
         
         
+        bundleshell.start();
         bundlebundlerepository.start();
         bundleipojo.start();
         bundleipojoannotations.start();
         bundleipojoarch.start();
         bundlefileinstall130.start();
+		
 	}
 
 	public void stop(BundleContext arg0) throws Exception {
