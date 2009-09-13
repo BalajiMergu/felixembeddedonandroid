@@ -2,7 +2,7 @@
 <!-- declare your component types and instances here -->
 
 <component classname="de.mn.felixembedand.gui.SpellCheckGui">
-	<provides/>
+	<provides/>  <!-- kurzform um einfach alle Interfaces die diese Komponente implementiert anzubieten -->
 	<requires optional="true">
 		<callback type="bind" method="bindSpellChecker"/>
 	    <callback type="unbind" method="unbindSpellChecker"/>
