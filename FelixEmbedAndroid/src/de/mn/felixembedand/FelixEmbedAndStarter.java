@@ -125,7 +125,7 @@ public class FelixEmbedAndStarter extends Activity {
 
 						@Override
 						public Object addingService(ServiceReference ref) {
-						    System.out.println("======= Service found !");
+						    System.out.println("=============== Service found ! =============");
 							final ViewFactory fac = (ViewFactory) m_felix.getBundleContext().getService(ref);
 							if (fac != null) {
 								runOnUiThread(new Runnable() {
@@ -246,7 +246,7 @@ public class FelixEmbedAndStarter extends Activity {
 			case Bundle.STOPPING: stateStr ="STOPPING"; break;
 			
 			}
-			if (stateStr.length() == 0) stateStr = "SHIT";
+			if (stateStr.length() == 0) stateStr = "UNKNOWN STATE";
 			
 			teststr = teststr+"\n "+b.getSymbolicName()+"\nSTATE: "+stateStr+" ";
 			System.out.println("TESTBUNDLE: "+b.getSymbolicName());
